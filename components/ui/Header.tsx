@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <>
-      <header role="banner" className="py-10 absolute w-full z-[3]">
+      <header role="banner" className="py-5 absolute w-full z-[3]">
         <div className="container px-4 mx-auto flex items-center justify-between">
           <div>
             <Link href="/" className="text=[22px] text-gray-700 font-bold">

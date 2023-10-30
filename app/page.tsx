@@ -1,1 +1,9 @@
-export default function Home() {}
+import Hero from "@/components/Home/Hero";
+
+export default function Home() {
+  return (
+    <>
+      <Hero className="pt-32 pb-0 lg:pb-10" />
+    </>
+  );
+}
