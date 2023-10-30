@@ -3,7 +3,35 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --cl-violet-600: #7c3aed;
+}
+
+@layer components {
+  .linkUnderlineHover {
+    position: relative;
+  }
+
+  .linkUnderlineHover::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cl-violet-600);
+    transform-origin: 100% 50%;
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform: scaleY(1);
+    transform: scaleZ(1);
+    will-change: transform;
+  }
+
+  .linkUnderlineHover:hover::before {
+    width: 100%;
+    transform-origin: 100% 0;
+    transform: scaleX(1);
+    transform: scaleY(1);
+    transform: scaleZ(1);
+  }
 }

@@ -36,7 +36,7 @@ const Header = () => {
                 <li key={i}>
                   <Link
                     href={href}
-                    className={`text-[12px] tracking-[1px] font-semibold pb-2 relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px] before:bg-violet-600 before:origin-[100%, 50%] before:transition-all before:duration-300 before:ease-in-out before:scale-x-0 before:scale-y-[1] before:scale-z-[1] before:will-change-transform hover:before:origin-[100%, 0] hover:before:scale-x-[1]  hover:before:scale-y-[1]  hover:before:scale-z-[1]`}
+                    className="text-[12px] tracking-[1px] font-semibold pb-2 linkUnderlineHover"
                   >
                     {label}
                   </Link>
@@ -44,7 +44,7 @@ const Header = () => {
               ))}
             </ul>
             <button
-              className="md:hidden text-md pb-2 relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px] before:bg-violet-600 before:origin-[100%, 50%] before:transition-all before:duration-300 before:ease-in-out before:scale-x-0 before:scale-y-[1] before:scale-z-[1] before:will-change-transform hover:before:origin-[100%, 0] hover:before:scale-x-[1]  hover:before:scale-y-[1]  hover:before:scale-z-[1]"
+              className="md:hidden text-md pb-2 linkUnderlineHover"
               onClick={() => setOpen(true)}
             >
               Menu
@@ -103,7 +103,7 @@ const Header = () => {
                                 <li key={i}>
                                   <Link
                                     href={href}
-                                    className="py-2 inline-block pb-2 relative before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[2px] before:bg-violet-600 before:origin-[100%, 50%] before:transition-all before:duration-300 before:ease-in-out before:scale-x-0 before:scale-y-[1] before:scale-z-[1] before:will-change-transform hover:before:origin-[100%, 0] hover:before:scale-x-[1]  hover:before:scale-y-[1]  hover:before:scale-z-[1]"
+                                    className="py-2 inline-block pb-2 linkUnderlineHover"
                                   >
                                     {label}
                                   </Link>

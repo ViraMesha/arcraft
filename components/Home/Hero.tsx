@@ -5,11 +5,12 @@ import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
+import dotsImg from "@/public/images/home/hero/dots.svg";
 import heroImg from "@/public/images/home/hero/hero.jpg";
 import { heroData } from "@/utils/data/heroData";
 
 type HeroProps = {
-  className?: string;
+  className: string;
 };
 
 const Hero = ({ className }: HeroProps) => {
@@ -116,7 +117,13 @@ const Hero = ({ className }: HeroProps) => {
               className="z-[2] relative bg-cover bg-center"
               style={{ y: imgScroll1 }}
             >
-              <Image src={heroImg} alt="Hero img" width={828} height={985} />
+              <Image
+                src={heroImg}
+                alt="Hero img"
+                width={828}
+                height={985}
+                priority
+              />
             </motion.div>
             <motion.div
               initial={{
@@ -136,10 +143,12 @@ const Hero = ({ className }: HeroProps) => {
               }}
               className="absolute bottom-0 lg:bottom-[200px] -left-[100px] z-[1]"
             >
-              <img
-                src="/images/home/hero/dots.svg"
+              <Image
+                src={dotsImg}
                 alt="dots decoration"
                 className="w-64"
+                width={200}
+                height={200}
               />
             </motion.div>
           </div>
