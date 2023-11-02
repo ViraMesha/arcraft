@@ -6,8 +6,9 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import dotsImg from "@/public/images/home/hero/dots.svg";
-import heroImg from "@/public/images/home/hero/hero.jpg";
+import heroImg from "@/public/images/home/hero/img.jpg";
 import { heroData } from "@/utils/data/heroData";
+import Subtitle from "../ui/Subtitle";
 
 type HeroProps = {
   className: string;
@@ -32,23 +33,10 @@ const Hero = ({ className }: HeroProps) => {
 
   return (
     <section className={`${className}`} ref={ref}>
-      <div className="container px-4 mx-auto">
+      <div className="wrapper">
         <div className="lg:flex w-full lg:w-10/12 mx-auto h-auto lg:h-screen lg:min-h-[700px] items-center justify-between">
           <div className="lg:w-4/12 z-[3] relative">
-            {subtitle && (
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                  transition: { delay: 0.1, duration: 0.5 },
-                }}
-                viewport={{ once: true }}
-                className="uppercase tracking-[3px] text-[12.5px] mb-5 inline-block text-gray-500"
-              >
-                {subtitle}
-              </motion.span>
-            )}
+            {subtitle && <Subtitle>{subtitle}</Subtitle>}
 
             {title && (
               <motion.h1
@@ -74,7 +62,7 @@ const Hero = ({ className }: HeroProps) => {
                   transition: { delay: 0.2, duration: 0.5 },
                 }}
                 viewport={{ once: true }}
-                className="leading-relaxed text-gray-500 w-auto lg:w-screen max-w-xl text-base lg:text-lg mb-10 lg:mb-16"
+                className="leading-relaxed text-black/80 w-auto lg:w-screen max-w-xl text-base lg:text-lg mb-10 lg:mb-16"
               >
                 {description}
               </motion.p>
@@ -92,7 +80,7 @@ const Hero = ({ className }: HeroProps) => {
               >
                 <Link
                   href={href}
-                  className="transition-all duration-300 ease-in-out text-[11.5px] tracking-[2px] font-bold uppercase bg-violet-600 py-4 px-5 text-white inline-block hover:bg-white hover:text-violet-600 hover:shadow-2xl"
+                  className="transition text-[11.5px] tracking-[2px] font-bold uppercase bg-blue-600 py-4 px-5 text-white inline-block hover:bg-white hover:text-blue-600 hover:shadow-2xl"
                 >
                   {label}
                 </Link>
@@ -120,8 +108,9 @@ const Hero = ({ className }: HeroProps) => {
               <Image
                 src={heroImg}
                 alt="Hero img"
+                className=" max-h-[800px]"
                 width={828}
-                height={985}
+                height={685}
                 priority
               />
             </motion.div>

@@ -8,6 +8,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import dotsImg from "@/public/images/home/hero/dots.svg";
 import { aboutData } from "@/utils/data/aboutData";
 
+import Subtitle from "../ui/Subtitle";
+import Title from "../ui/Title";
+
 type AboutProps = {
   className: string;
 };
@@ -31,43 +34,11 @@ const About = ({ className }: AboutProps) => {
 
   return (
     <section className={`${className}`} ref={ref}>
-      <div className="container px-4 mx-auto">
+      <div className="wrapper">
         <div className="text-center lg:max-w-lg mx-auto mb-20 lg:mb-22 relative z-[5]">
-          {subTitle && (
-            <motion.span
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.2,
-                duration: 0.5,
-              }}
-              viewport={{ once: true }}
-              className="uppercase tracking-[3px] text-[12.5px] mb-5 inline-block text-gray-500"
-            >
-              {subTitle}
-            </motion.span>
-          )}
+          {subTitle && <Subtitle>{subTitle}</Subtitle>}
 
-          {title && (
-            <motion.h2
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.5,
-              }}
-              viewport={{ once: true }}
-              className="text-2xl lg:text-4-xl"
-            >
-              {title}
-            </motion.h2>
-          )}
+          {title && <Title>{title}</Title>}
         </div>
 
         <div className="lg:flex justify-center">
@@ -85,6 +56,7 @@ const About = ({ className }: AboutProps) => {
                   className="object-cover !w-full !h-[550px] lg:max-w-2xl object-center"
                   width={400}
                   height={600}
+                  quality={100}
                 />
               </motion.div>
               <motion.div
@@ -157,7 +129,7 @@ const About = ({ className }: AboutProps) => {
               >
                 <Link
                   href={href}
-                  className="transition-all duration-300 ease-in-out text-[11.5px] tracking-[2px] font-bold uppercase  bg-violet-600 py-4 px-5 text-white inline-block hover:bg-white hover:text-violet-600 hover:shadow-2xl"
+                  className="transition text-[11.5px] tracking-[2px] font-bold uppercase  bg-blue-600 py-4 px-5 text-white inline-block hover:bg-white hover:text-blue-600 hover:shadow-2xl"
                 >
                   {label}
                 </Link>

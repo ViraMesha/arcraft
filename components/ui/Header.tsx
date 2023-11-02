@@ -27,7 +27,7 @@ const Header = () => {
         <div className="container px-4 mx-auto flex items-center justify-between">
           <div>
             <Link href="/" className="text=[22px] text-gray-700 font-bold">
-              acraft <span className="text-violet-600">.</span>
+              acraft <span className="text-blue-600">.</span>
             </Link>
           </div>
           <nav className="flex">
@@ -118,7 +118,7 @@ const Header = () => {
                         <div>
                           <Link
                             href="/contact"
-                            className="block text-center text-[11.5px] tracking-[2px] font-bold uppercase bg-violet-600 py-4 px-5 text-white"
+                            className="block text-center text-[11.5px] tracking-[2px] font-bold uppercase bg-blue-600 py-4 px-5 text-white hover:bg-white hover:text-blue-600 hover:shadow-2xl transition"
                           >
                             Contact us now
                           </Link>

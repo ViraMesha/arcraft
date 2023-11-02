@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --cl-violet-600: #7c3aed;
+  --cl-blue-600: #2563eb;
 }
 
 @layer components {
@@ -18,7 +18,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--cl-violet-600);
+    background-color: var(--cl-blue-600);
     transform-origin: 100% 50%;
     transition: all 0.3s ease-in-out;
     transform: scaleX(0);
@@ -34,4 +34,16 @@
     transform: scaleY(1);
     transform: scaleZ(1);
   }
+}
+
+.wrapper {
+  @apply container px-4 mx-auto;
+}
+
+.subtitle {
+  @apply uppercase tracking-[3px] text-[12.5px] mb-5 inline-block text-gray-500;
+}
+
+.transition {
+  @apply duration-300 transition-all ease-in-out;
 }
