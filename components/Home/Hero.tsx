@@ -8,13 +8,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import dotsImg from "@/public/images/home/hero/dots.svg";
 import heroImg from "@/public/images/home/hero/img.jpg";
 import { heroData } from "@/utils/data/heroData";
+
 import Subtitle from "../ui/Subtitle";
 
-type HeroProps = {
-  className: string;
-};
-
-const Hero = ({ className }: HeroProps) => {
+const Hero = ({ className }: SectionProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,

@@ -8,11 +8,7 @@ import { howItWorksData } from "@/utils/data/howItWorksData";
 import Subtitle from "../ui/Subtitle";
 import Title from "../ui/Title";
 
-type HowItWorksProps = {
-  className: string;
-};
-
-const HowItWorks = ({ className }: HowItWorksProps) => {
+const HowItWorks = ({ className }: SectionProps) => {
   const {
     heading: { title, subtitle, description, steps, features },
   } = howItWorksData;

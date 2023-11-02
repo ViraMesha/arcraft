@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} overflow-x-clip`}>
+      <body className={`${inter.className} bg-[#f3f5f8] overflow-x-clip`}>
         <Header />
         {children}
       </body>

@@ -11,11 +11,7 @@ import { aboutData } from "@/utils/data/aboutData";
 import Subtitle from "../ui/Subtitle";
 import Title from "../ui/Title";
 
-type AboutProps = {
-  className: string;
-};
-
-const About = ({ className }: AboutProps) => {
+const About = ({ className }: SectionProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({

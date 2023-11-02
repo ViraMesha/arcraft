@@ -1,0 +1,3 @@
+type SectionProps = {
+  className: string;
+};
