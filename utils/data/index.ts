@@ -1,1 +1,0 @@
-export { navData } from "./navData";

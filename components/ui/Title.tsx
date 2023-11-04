@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 type TitleProps = {
   children: React.ReactNode;
   delay?: number;
+  className?: string;
 };
 
-const Title = ({ children, delay = 0.3 }: TitleProps) => {
+const Title = ({ children, delay = 0.3, className }: TitleProps) => {
   return (
     <motion.h2
       initial={{
@@ -19,7 +20,7 @@ const Title = ({ children, delay = 0.3 }: TitleProps) => {
         duration: 0.5,
       }}
       viewport={{ once: true }}
-      className="text-2xl lg:text-4-xl"
+      className={`${className ? className : ""} text-2xl lg:text-4-xl`}
     >
       {children}
     </motion.h2>

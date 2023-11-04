@@ -6,7 +6,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useWindowSize } from "usehooks-ts";
 
-import { navData } from "@/utils/data";
+import { navData } from "@/utils/data/navData";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
