@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import Footer from "@/components/ui/Footer";
 import Header from "@/components/ui/Header";
 
 import "./globals.css";
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-[#f3f5f8] overflow-x-clip`}>
         <Header />
         {children}
+        <Footer className="bg-white py-16 md:py-24" />
       </body>
     </html>
   );

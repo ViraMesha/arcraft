@@ -8,6 +8,8 @@ import { useWindowSize } from "usehooks-ts";
 
 import { navData } from "@/utils/data/navData";
 
+import Logo from "./Logo";
+
 const Header = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -26,9 +28,7 @@ const Header = () => {
       <header role="banner" className="py-5 absolute w-full z-[3]">
         <div className="container px-4 mx-auto flex items-center justify-between">
           <div>
-            <Link href="/" className="text=[22px] text-gray-700 font-bold">
-              acraft <span className="text-blue-600">.</span>
-            </Link>
+            <Logo />
           </div>
           <nav className="flex">
             <ul role="list" className="hidden md:flex space-x-8">

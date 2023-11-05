@@ -1,4 +1,3 @@
-"use client";
 import { BiSolidPaperPlane } from "react-icons/bi";
 import { motion } from "framer-motion";
 
