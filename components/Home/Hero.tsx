@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import dotsImg from "@/public/images/home/hero/dots.svg";
 import heroImg from "@/public/images/home/hero/img.jpg";
-import { heroData } from "@/utils/data/heroData";
+import { heroContent } from "@/utils/data/heroContent";
 
 import Subtitle from "../ui/Subtitle";
 
@@ -23,7 +23,7 @@ const Hero = ({ className }: SectionProps) => {
     subtitle,
     description,
     link: { href, label },
-  } = heroData.intro;
+  } = heroContent.intro;
 
   const imgScroll1 = useTransform(scrollYProgress, [0, 1], ["20%", "-20%"]);
   const imgScroll2 = useTransform(scrollYProgress, [0, 1], ["100%", "50%"]);

@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-import { footerData } from "@/utils/data/footerData";
+import { footerContent } from "@/utils/data/footerContent";
 
 import Copyright from "./Copyright";
 import Logo from "./Logo";
 
 const Footer = ({ className }: SectionProps) => {
-  const { footerLinks } = footerData;
+  const { footerLinks } = footerContent;
   return (
     <footer className={`${className} overflow-hidden w-full h-full`}>
       <div className="wrapper z-20 relative">

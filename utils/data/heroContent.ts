@@ -1,4 +1,4 @@
-export const heroData = {
+export const heroContent = {
   intro: {
     title: "Elevating Designs with Unwavering Structural Excellence",
     subtitle: "Welcome",

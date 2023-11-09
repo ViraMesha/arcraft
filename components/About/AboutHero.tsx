@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-import { aboutHeroData } from "@/utils/data/aboutHeroData";
+import { aboutHeroContent } from "@/utils/data/aboutHeroContent";
 
 import Subtitle from "../ui/Subtitle";
 
@@ -13,8 +13,8 @@ type AboutHeroProps = {
 
 const AboutHero = ({
   className,
-  title = aboutHeroData.heading.title,
-  subTitle = aboutHeroData.heading.subtitle,
+  title = aboutHeroContent.heading.title,
+  subTitle = aboutHeroContent.heading.subtitle,
 }: AboutHeroProps) => {
   return (
     <section className={`${className}`}>

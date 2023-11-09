@@ -3,15 +3,16 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-import { howItWorksData } from "@/utils/data/howItWorksData";
+import { howItWorksContent } from "@/utils/data/howItWorksContent";
 
+import Description from "../ui/Description";
 import Subtitle from "../ui/Subtitle";
 import Title from "../ui/Title";
 
 const HowItWorks = ({ className }: SectionProps) => {
   const {
     heading: { title, subtitle, description, steps, features },
-  } = howItWorksData;
+  } = howItWorksContent;
 
   return (
     <>
@@ -25,23 +26,7 @@ const HowItWorks = ({ className }: SectionProps) => {
               </div>
 
               <div className="lg:w-5/12 self-end">
-                {description && (
-                  <motion.p
-                    initial={{
-                      opacity: 0,
-                      y: 10,
-                    }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{
-                      delay: 0.6,
-                      duration: 0.5,
-                    }}
-                    viewport={{ once: true }}
-                    className=" text-gray-500"
-                  >
-                    {description}
-                  </motion.p>
-                )}
+                {description && <Description>{description}</Description>}
               </div>
             </div>
           </div>

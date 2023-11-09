@@ -2,7 +2,7 @@ import person1Img from "@/public/images/home/testimonials/person-1-min.jpg";
 import person2Img from "@/public/images/home/testimonials/person-2-min.jpg";
 import person3Img from "@/public/images/home/testimonials/person-3-min.jpg";
 
-export const testimonialData = {
+export const testimonialContent = {
   heading: {
     title: "Hear what our customers say.",
     subTitle: "Testimonials",

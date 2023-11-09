@@ -1,6 +1,6 @@
 import aboutImg from "@/public/images/home/about/about.jpg";
 
-export const aboutData = {
+export const aboutContent = {
   heading: {
     title: "Elevating Designs with Unwavering Structural Excellence",
     subTitle: "About us",

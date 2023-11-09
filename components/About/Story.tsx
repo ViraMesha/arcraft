@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { storyData } from "@/utils/data/storyData";
+import { storyContent } from "@/utils/data/storyContent";
 
 const Story = ({ className }: SectionProps) => {
   const {
@@ -10,7 +10,7 @@ const Story = ({ className }: SectionProps) => {
     column2: { imgs: imgs2 },
     column3: { imgs: imgs3 },
     storyText: { heading, text1, text2, signature, name, role },
-  } = storyData;
+  } = storyContent;
   return (
     <section className={`${className}`}>
       <div className="wrapper">

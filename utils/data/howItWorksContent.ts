@@ -8,7 +8,7 @@ import {
   BiPaintRoll,
 } from "react-icons/bi";
 
-export const howItWorksData = {
+export const howItWorksContent = {
   heading: {
     title: "Where imagination intersects with architectural soundness",
     subtitle: "How it functions",

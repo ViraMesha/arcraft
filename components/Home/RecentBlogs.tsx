@@ -2,8 +2,9 @@ import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 import { motion } from "framer-motion";
 
-import { recentBlogData } from "@/utils/data/recentBlogData";
+import { recentBlogContent } from "@/utils/data/recentBlogContent";
 
+import Description from "../ui/Description";
 import Subtitle from "../ui/Subtitle";
 import Title from "../ui/Title";
 
@@ -12,7 +13,7 @@ import PostCard from "./PostCard";
 const RecentBlogs = ({ className }: SectionProps) => {
   const {
     heading: { title, subTitle, description },
-  } = recentBlogData;
+  } = recentBlogContent;
 
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
@@ -30,18 +31,7 @@ const RecentBlogs = ({ className }: SectionProps) => {
 
             <div className="lg:w-5/12 self-end">
               {description && (
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { delay: 0.15, duration: 0.5 },
-                  }}
-                  viewport={{ once: true }}
-                  className="text-gray-500"
-                >
-                  {description}
-                </motion.p>
+                <Description delay={0.15} y={20}>{description}</Description>
               )}
             </div>
           </div>

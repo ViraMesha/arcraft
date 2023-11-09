@@ -1,7 +1,8 @@
+"use client";
 import { BiSolidPaperPlane } from "react-icons/bi";
 import { motion } from "framer-motion";
 
-import { subscribeData } from "@/utils/data/subscribeData";
+import { subscribeContent } from "@/utils/data/subscribeContent";
 
 import Title from "../ui/Title";
 
@@ -9,7 +10,7 @@ const Subscribe = ({ className }: SectionProps) => {
   const {
     heading: { title, subTitle, description },
     form: { placeholder },
-  } = subscribeData;
+  } = subscribeContent;
   return (
     <section className={`${className}`}>
       <div className="wrapper">
@@ -53,7 +54,7 @@ const Subscribe = ({ className }: SectionProps) => {
             className="flex relative w-auto max-w-xl mx-auto justify-center gap-5 items-center"
           >
             <input
-              className="appearance-none bg-white py-4 px-7 w-auto lg:w-screen !pr-16 max-w-md shadow-md rounded-full outline outline-none"
+              className="appearance-none bg-white py-4 px-7 w-auto lg:w-screen !pr-16 max-w-md shadow-md rounded-full outline outline-none transition hover:bg-gray-200 hover:placeholder-gray-500"
               placeholder={placeholder}
               required
               type="email"

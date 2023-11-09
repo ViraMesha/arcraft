@@ -6,7 +6,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useWindowSize } from "usehooks-ts";
 
-import { navData } from "@/utils/data/navData";
+import { navContent } from "@/utils/data/navContent";
 
 import Logo from "./Logo";
 
@@ -32,7 +32,7 @@ const Header = () => {
           </div>
           <nav className="flex">
             <ul role="list" className="hidden md:flex space-x-8">
-              {navData.map(({ href, label }, i) => (
+              {navContent.map(({ href, label }, i) => (
                 <li key={i}>
                   <Link
                     href={href}
@@ -99,7 +99,7 @@ const Header = () => {
                         <div className="mt-8">
                           <nav className="flow-root">
                             <ul role="list">
-                              {navData.map(({ href, label }, i) => (
+                              {navContent.map(({ href, label }, i) => (
                                 <li key={i}>
                                   <Link
                                     href={href}

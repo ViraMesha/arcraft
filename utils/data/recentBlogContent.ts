@@ -1,4 +1,4 @@
-export const recentBlogData = {
+export const recentBlogContent = {
   heading: {
     title: "Recent updates",
     subTitle: "Our Blog",

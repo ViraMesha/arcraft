@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import dotsImg from "@/public/images/home/hero/dots.svg";
-import { aboutData } from "@/utils/data/aboutData";
+import { aboutContent } from "@/utils/data/aboutContent";
 
 import Subtitle from "../ui/Subtitle";
 import Title from "../ui/Title";
@@ -26,7 +26,7 @@ const About = ({ className }: SectionProps) => {
     heading: { title, subTitle },
     content: { img, title: contentTitle, description },
     btn: { href, label },
-  } = aboutData;
+  } = aboutContent;
 
   return (
     <section className={`${className}`} ref={ref}>

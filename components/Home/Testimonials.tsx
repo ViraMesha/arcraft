@@ -5,7 +5,7 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 
-import { testimonialData } from "@/utils/data/testimonialData";
+import { testimonialContent } from "@/utils/data/testimonialContent";
 
 import Subtitle from "../ui/Subtitle";
 import Title from "../ui/Title";
@@ -22,7 +22,7 @@ const Testimonials = ({ className }: SectionProps) => {
   const {
     heading: { title, subTitle },
     testimonials,
-  } = testimonialData;
+  } = testimonialContent;
 
   useEffect(() => {
     setIsEnd(sliderRef.current?.swiper.isEnd);

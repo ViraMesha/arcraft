@@ -1,6 +1,6 @@
 import React from "react";
 import { BiArch, BiHardHat, BiSolidUser } from "react-icons/bi";
-export const whyData = {
+export const whyContent = {
   heading: {
     title: "Blueprinting Tomorrow's Landscapes Today",
     subTitle: "Why us",

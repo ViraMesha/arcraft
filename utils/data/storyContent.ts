@@ -9,7 +9,7 @@ import team4 from "../../public/images/about/team/team-4.jpg";
 import team5 from "../../public/images/about/team/team-5.jpg";
 import team6 from "../../public/images/about/team/team-6.jpg";
 
-export const storyData = {
+export const storyContent = {
   column1: {
     imgs: [
       {

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import { whyData } from "@/utils/data/whyData";
+import { whyContent } from "@/utils/data/whyContent";
 
 import team2Img from "../../public/images/about/team/team-2.jpg";
 import Subtitle from "../ui/Subtitle";
@@ -22,7 +22,7 @@ const Why = ({ className }: SectionProps) => {
   const {
     heading: { title, subTitle },
     whyUsItems,
-  } = whyData;
+  } = whyContent;
 
   return (
     <section ref={ref} className={`${className}`}>

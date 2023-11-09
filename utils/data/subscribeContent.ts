@@ -1,4 +1,4 @@
-export const subscribeData = {
+export const subscribeContent = {
   heading: {
     title: "Never Miss an Update, Subscribe Today",
     subTitle: "Join our community",
