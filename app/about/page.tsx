@@ -1,9 +1,9 @@
-import AboutHero from "@/components/About/AboutHero";
 import Story from "@/components/About/Story";
 import Team from "@/components/About/Team";
 import Why from "@/components/About/Why";
 import Subscribe from "@/components/Home/Subscribe";
 import Testimonials from "@/components/Home/Testimonials";
+import AboutHero from "@/components/ui/Hero";
 
 export default function About() {
   return (

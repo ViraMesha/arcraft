@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { aboutHeroContent } from "@/utils/data/aboutHeroContent";
 
-import Subtitle from "../ui/Subtitle";
+import Subtitle from "./Subtitle";
 
 type AboutHeroProps = {
   className: string;
@@ -11,7 +11,7 @@ type AboutHeroProps = {
   subTitle?: string;
 };
 
-const AboutHero = ({
+const Hero = ({
   className,
   title = aboutHeroContent.heading.title,
   subTitle = aboutHeroContent.heading.subtitle,
@@ -46,4 +46,4 @@ const AboutHero = ({
   );
 };
 
-export default AboutHero;
+export default Hero;
