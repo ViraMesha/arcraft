@@ -13,15 +13,13 @@ type ProjectsProps = {
 
 const Projects = ({ className, itemsPerPage }: ProjectsProps) => {
   const [currentItems, setCurrentItems] = useState<Project[] | null>(null);
-  const [pageCount, setPageCount] = useState(1);
+  const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
   const [clickPaginate, setClickPaginate] = useState(false);
 
   const items = allProjects.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   );
-
-  console.log(pageCount);
 
   const ref = useRef<HTMLDivElement>(null);
 
