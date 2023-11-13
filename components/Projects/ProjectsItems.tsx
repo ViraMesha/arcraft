@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 
-import { Project } from "@/.contentlayer/generated/types";
+import type { Project } from "@/.contentlayer/generated/types";
 
 type ProjectsItemsProps = {
   currentItems: Project[];

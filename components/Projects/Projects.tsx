@@ -4,6 +4,8 @@ import ReactPaginate from "react-paginate";
 import { allProjects, Project } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 
+import { sortProjectsByDateDescending } from "../helpers/sortProjectsByDateDescending";
+
 import ProjectsItems from "./ProjectsItems";
 
 type ProjectsProps = {
@@ -17,9 +19,7 @@ const Projects = ({ className, itemsPerPage }: ProjectsProps) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [clickPaginate, setClickPaginate] = useState(false);
 
-  const items = allProjects.sort((a, b) =>
-    compareDesc(new Date(a.date), new Date(b.date))
-  );
+  const items = sortProjectsByDateDescending();
 
   const ref = useRef<HTMLDivElement>(null);
 
