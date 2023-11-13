@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StyledLink from "../ui/StyledLink";
 
 type CTAProps = {
   className: string;
@@ -19,12 +20,9 @@ const CTA = ({ className, title, description, label, link }: CTAProps) => {
               {description}
             </p>
             <p>
-              <Link
-                href={link}
-                className="transition inline-block text-[11.5px] tracking-[2px] font-bold uppercase bg-[#eb2576] py-4 px-5 text-white hover:bg-white hover:text-blue-600 hover:shadow-2xl"
-              >
+              <StyledLink href={link} background="bg-[#eb2576]">
                 {label}
-              </Link>
+              </StyledLink>
             </p>
           </div>
         </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -9,6 +8,7 @@ import dotsImg from "@/public/images/home/hero/dots.svg";
 import heroImg from "@/public/images/home/hero/img.jpg";
 import { heroContent } from "@/utils/data/heroContent";
 
+import StyledLink from "../ui/StyledLink";
 import Subtitle from "../ui/Subtitle";
 
 const Hero = ({ className }: SectionProps) => {
@@ -75,12 +75,7 @@ const Hero = ({ className }: SectionProps) => {
                 }}
                 viewport={{ once: true }}
               >
-                <Link
-                  href={href}
-                  className="transition text-[11.5px] tracking-[2px] font-bold uppercase bg-blue-600 py-4 px-5 text-white inline-block hover:bg-white hover:text-blue-600 hover:shadow-2xl"
-                >
-                  {label}
-                </Link>
+                <StyledLink href={href}>{label}</StyledLink>
               </motion.p>
             )}
           </div>

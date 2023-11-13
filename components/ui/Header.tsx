@@ -9,6 +9,7 @@ import { useWindowSize } from "usehooks-ts";
 import { navContent } from "@/utils/data/navContent";
 
 import Logo from "./Logo";
+import StyledLink from "./StyledLink";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -116,12 +117,9 @@ const Header = () => {
 
                       <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                         <div>
-                          <Link
-                            href="/contact"
-                            className="block text-center text-[11.5px] tracking-[2px] font-bold uppercase bg-blue-600 py-4 px-5 text-white hover:bg-white hover:text-blue-600 hover:shadow-2xl transition"
-                          >
+                          <StyledLink href="/contact">
                             Contact us now
-                          </Link>
+                          </StyledLink>
                         </div>
                       </div>
                     </div>

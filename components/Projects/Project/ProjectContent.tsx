@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { getMDXComponent } from "next-contentlayer/hooks";
 import { format, parseISO } from "date-fns";
 import { motion } from "framer-motion";
 
 import type { Project } from "@/.contentlayer/generated";
 import { sortProjectsByDateDescending } from "@/components/helpers/sortProjectsByDateDescending";
+import StyledLink from "@/components/ui/StyledLink";
 
 import PostCard from "./PostCard";
 
@@ -94,12 +94,7 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
             })}
         </div>
         <div className="flex justify-center mt-10">
-          <Link
-            href="/projects"
-            className="transition text-[11.5px] tracking-[2px] font-bold uppercase bg-blue-600 py-4 px-5 text-white hover:bg-white hover:text-blue-600 hover:shadow-2xl"
-          >
-            View all Projects
-          </Link>
+          <StyledLink href="/projects">View all Projects</StyledLink>
         </div>
       </div>
     </motion.div>

@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import dotsImg from "@/public/images/home/hero/dots.svg";
 import { aboutContent } from "@/utils/data/aboutContent";
 
+import StyledLink from "../ui/StyledLink";
 import Subtitle from "../ui/Subtitle";
 import Title from "../ui/Title";
 
@@ -123,12 +123,7 @@ const About = ({ className }: SectionProps) => {
                 viewport={{ once: true }}
                 className=""
               >
-                <Link
-                  href={href}
-                  className="transition text-[11.5px] tracking-[2px] font-bold uppercase  bg-blue-600 py-4 px-5 text-white inline-block hover:bg-white hover:text-blue-600 hover:shadow-2xl"
-                >
-                  {label}
-                </Link>
+                <StyledLink href={href}>{label}</StyledLink>
               </motion.p>
             </div>
           </div>
