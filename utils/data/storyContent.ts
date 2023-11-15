@@ -1,13 +1,11 @@
-import post1 from "../../public/images/about/posts/post-1-min.jpg";
-import post2 from "../../public/images/about/posts/post-2-min.jpg";
-import post3 from "../../public/images/about/posts/post-3-min.jpg";
 import signatureImg from "../../public/images/about/signature.svg";
 import team1 from "../../public/images/about/team/team-1.jpg";
 import team2 from "../../public/images/about/team/team-2.jpg";
 import team3 from "../../public/images/about/team/team-3.jpg";
 import team4 from "../../public/images/about/team/team-4.jpg";
 import team5 from "../../public/images/about/team/team-5.jpg";
-import team6 from "../../public/images/about/team/team-6.jpg";
+import post1 from "../../public/images/post-1-min.jpg";
+import post2 from "../../public/images/post-2-min.jpg";
 
 export const storyContent = {
   column1: {

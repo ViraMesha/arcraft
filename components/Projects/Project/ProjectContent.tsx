@@ -6,7 +6,7 @@ import { format, parseISO } from "date-fns";
 import { motion } from "framer-motion";
 
 import type { Project } from "@/.contentlayer/generated";
-import { sortProjectsByDateDescending } from "@/components/helpers/sortProjectsByDateDescending";
+import { sortProjectsByDateDescending } from "@/helpers/sortByDateDescending";
 import StyledLink from "@/components/ui/StyledLink";
 
 import PostCard from "./PostCard";

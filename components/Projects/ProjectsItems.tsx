@@ -13,7 +13,7 @@ const ProjectsItems = ({ currentItems }: ProjectsItemsProps) => {
   return (
     <>
       {currentItems &&
-        currentItems.map((project, index) => {
+        currentItems.map(({ url, image, role, title }, index) => {
           const delay = index * 0.05;
           return (
             <motion.div
@@ -27,12 +27,9 @@ const ProjectsItems = ({ currentItems }: ProjectsItemsProps) => {
               }}
               viewport={{ once: true }}
             >
-              <Link
-                href={project.url}
-                className="overflow-hidden block relative"
-              >
+              <Link href={url} className="overflow-hidden block relative">
                 <Image
-                  src={project.image}
+                  src={image}
                   alt="Project"
                   width={1064}
                   height={644}
@@ -40,10 +37,10 @@ const ProjectsItems = ({ currentItems }: ProjectsItemsProps) => {
                 />
               </Link>
               <div className="py-8 px-2">
-                <span className="block mb-1 text-gray-500">{project.role}</span>
+                <span className="block mb-1 text-gray-500">{role}</span>
                 <h3 className="mb-4">
-                  <Link href={project.url} className="text-2xl leading-none">
-                    {project.title}
+                  <Link href={url} className="text-2xl leading-none">
+                    {title}
                   </Link>
                 </h3>
               </div>

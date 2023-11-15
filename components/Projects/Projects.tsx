@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import ReactPaginate from "react-paginate";
-import { allProjects, Project } from "contentlayer/generated";
-import { compareDesc } from "date-fns";
+import { Project } from "contentlayer/generated";
 
-import { sortProjectsByDateDescending } from "../helpers/sortProjectsByDateDescending";
+import { allProjects } from "@/.contentlayer/generated";
+
+import { sortByDateDescending } from "../../helpers/sortByDateDescending";
 
 import ProjectsItems from "./ProjectsItems";
 
@@ -19,7 +20,7 @@ const Projects = ({ className, itemsPerPage }: ProjectsProps) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [clickPaginate, setClickPaginate] = useState(false);
 
-  const items = sortProjectsByDateDescending();
+  const items = sortByDateDescending(allProjects);
 
   const ref = useRef<HTMLDivElement>(null);
 

@@ -3,8 +3,9 @@ import About from "@/components/Home/About";
 import Hero from "@/components/Home/Hero";
 import HowItWorks from "@/components/Home/HowItWorks";
 import RecentBlog from "@/components/Home/RecentBlogs";
-import Subscribe from "@/components/Home/Subscribe";
 import Testimonial from "@/components/Home/Testimonials";
+
+import Subscribe from "./../components/ui/Subscribe";
 
 export default function Home() {
   return (

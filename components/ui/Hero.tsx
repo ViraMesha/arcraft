@@ -5,7 +5,7 @@ import { aboutHeroContent } from "@/utils/data/aboutHeroContent";
 
 import Subtitle from "./Subtitle";
 
-type AboutHeroProps = {
+type HeroProps = {
   className: string;
   title?: string;
   subTitle?: string;
@@ -15,7 +15,7 @@ const Hero = ({
   className,
   title = aboutHeroContent.heading.title,
   subTitle = aboutHeroContent.heading.subtitle,
-}: AboutHeroProps) => {
+}: HeroProps) => {
   return (
     <section className={`${className}`}>
       <div className="wrapper">

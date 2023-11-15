@@ -1,6 +1,13 @@
+import { Metadata } from "next";
+
 import CTA from "@/components/Projects/CTA";
 import Projects from "@/components/Projects/Projects";
 import Hero from "@/components/ui/Hero";
+
+export const metadata: Metadata = {
+  title: "Arcraft | Projects",
+};
+
 export default function page() {
   return (
     <>

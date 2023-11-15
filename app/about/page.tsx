@@ -1,9 +1,16 @@
+import { Metadata } from "next";
+
 import Story from "@/components/About/Story";
 import Team from "@/components/About/Team";
 import Why from "@/components/About/Why";
-import Subscribe from "@/components/Home/Subscribe";
 import Testimonials from "@/components/Home/Testimonials";
 import AboutHero from "@/components/ui/Hero";
+
+import Subscribe from "./../../components/ui/Subscribe";
+
+export const metadata: Metadata = {
+  title: "Arcraft | About",
+};
 
 export default function About() {
   return (
