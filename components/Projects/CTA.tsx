@@ -1,4 +1,3 @@
-import Link from "next/link";
 import StyledLink from "../ui/StyledLink";
 
 type CTAProps = {

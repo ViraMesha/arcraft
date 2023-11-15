@@ -6,8 +6,9 @@ import { format, parseISO } from "date-fns";
 import { motion } from "framer-motion";
 
 import type { Project } from "@/.contentlayer/generated";
-import { sortProjectsByDateDescending } from "@/helpers/sortByDateDescending";
+import { allProjects } from "@/.contentlayer/generated";
 import StyledLink from "@/components/ui/StyledLink";
+import { sortByDateDescending } from "@/helpers/sortByDateDescending";
 
 import PostCard from "./PostCard";
 
@@ -16,7 +17,7 @@ type ProjectContentProps = {
 };
 
 const ProjectContent = ({ project }: ProjectContentProps) => {
-  const projects = sortProjectsByDateDescending();
+  const projects = sortByDateDescending(allProjects);
   const { title, role, image, url, client, date, year } = project;
 
   let MDXContent;
