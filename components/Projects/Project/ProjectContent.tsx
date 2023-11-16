@@ -23,8 +23,9 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
   let MDXContent;
 
   if (!projects) return null;
-  console.log("Project not found");
+
   if (!project) {
+    console.log("Project not found");
   } else {
     MDXContent = getMDXComponent(project.body.code);
   }
