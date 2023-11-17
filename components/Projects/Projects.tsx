@@ -34,7 +34,7 @@ const Projects = ({ className, itemsPerPage }: ProjectsProps) => {
       ref.current?.scrollIntoView({ top: -50, behavior: "smooth" });
       setClickPaginate(false);
     }
-  }, [setCurrentItems, setPageCount, setClickPaginate]);
+  }, [itemOffset, itemsPerPage, clickPaginate, ref]);
 
   const handlePageClick = (event: { selected: number }) => {
     const newOffset: number = (event.selected * itemsPerPage) % items.length;

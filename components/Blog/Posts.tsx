@@ -34,7 +34,7 @@ const Posts = ({
     items = sortByDateDescending(allPosts);
   } else {
     if (params?.slug) {
-      items = filterPostsWithCategorySlug(allPosts, params.slug)
+      items = filterPostsWithCategorySlug(allPosts, params.slug);
     }
   }
 
@@ -46,10 +46,10 @@ const Posts = ({
     }
 
     if (clickPaginate) {
-        ref.current?.scrollIntoView({ block: "start", behavior: "smooth" });
+      ref.current?.scrollIntoView({ block: "start", behavior: "smooth" });
       setClickPaginate(false);
     }
-  }, [setCurrentItems, setPageCount, setClickPaginate]);
+  }, [itemOffset, itemsPerPage, clickPaginate, ref]);
 
   const handlePageClick = (event: { selected: number }) => {
     if (items) {
