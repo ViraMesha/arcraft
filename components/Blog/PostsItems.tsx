@@ -33,6 +33,7 @@ const PostsItems = ({ currentItems }: PostsItemsProps) => {
             >
               <Link href={url} className="overflow-hidden block relative">
                 <Image
+                  priority
                   src={image}
                   alt={title}
                   width={1064}

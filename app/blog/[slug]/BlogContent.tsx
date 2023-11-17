@@ -57,7 +57,7 @@ const BlogContent = ({ post }: BlogContentProps) => {
 
             {post.categories.map((category, index) => (
               <Link
-                href={`blog/categories/${slugify(category.title)}`}
+                href={`/blog/categories/${slugify(category.title)}`}
                 key={category.title}
                 className="font-medium"
               >

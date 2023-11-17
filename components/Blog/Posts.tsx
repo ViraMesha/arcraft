@@ -4,6 +4,7 @@ import ReactPaginate from "react-paginate";
 import { format, parseISO } from "date-fns";
 
 import { allPosts, Post } from "@/.contentlayer/generated";
+import { filterPostsWithCategorySlug } from "@/helpers/filterPostsWithCategorySlug";
 import { sortByDateDescending } from "@/helpers/sortByDateDescending";
 
 import PostsItems from "./PostsItems";
@@ -33,17 +34,7 @@ const Posts = ({
     items = sortByDateDescending(allPosts);
   } else {
     if (params?.slug) {
-      items = allPosts.filter((post) =>
-        post.categories.some(
-          (category) =>
-            category.title
-              .toLocaleLowerCase()
-              .trim()
-              .replace(/[^\w\s-]/g, "")
-              .replace(/[\s_-]+/g, "-")
-              .replace(/^-+|-+$/g, "") === params?.slug
-        )
-      );
+      items = filterPostsWithCategorySlug(allPosts, params.slug)
     }
   }
 
@@ -55,12 +46,10 @@ const Posts = ({
     }
 
     if (clickPaginate) {
-      setTimeout(() => {
         ref.current?.scrollIntoView({ block: "start", behavior: "smooth" });
-      }, 3000);
       setClickPaginate(false);
     }
-  }, [clickPaginate, itemOffset, items, itemsPerPage]);
+  }, [setCurrentItems, setPageCount, setClickPaginate]);
 
   const handlePageClick = (event: { selected: number }) => {
     if (items) {
