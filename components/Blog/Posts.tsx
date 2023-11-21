@@ -1,11 +1,11 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import ReactPaginate from "react-paginate";
-import { format, parseISO } from "date-fns";
 
 import { allPosts, Post } from "@/.contentlayer/generated";
 import { filterPostsWithCategorySlug } from "@/helpers/filterPostsWithCategorySlug";
 import { sortByDateDescending } from "@/helpers/sortByDateDescending";
+
+import Pagination from "../ui/Pagination";
 
 import PostsItems from "./PostsItems";
 
@@ -68,25 +68,9 @@ const Posts = ({
               {currentItems && <PostsItems currentItems={currentItems} />}
             </div>
             <div className="lg:w-10/12 mx-auto flex flex-wrap">
-              <ReactPaginate
-                nextLabel="Next"
-                previousLabel="Previous"
-                onPageChange={handlePageClick}
-                pageRangeDisplayed={3}
-                marginPagesDisplayed={2}
+              <Pagination
+                handlePageClick={handlePageClick}
                 pageCount={pageCount}
-                pageClassName="page-item"
-                pageLinkClassName="page-link"
-                previousClassName="page-item"
-                previousLinkClassName="page-link"
-                nextClassName="page-item"
-                nextLinkClassName="page-link"
-                breakLabel="..."
-                breakClassName="page-item"
-                breakLinkClassName="page-link"
-                containerClassName="pagination"
-                activeClassName="active"
-                renderOnZeroPageCount={null}
               />
             </div>
           </div>

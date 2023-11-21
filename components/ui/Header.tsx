@@ -18,6 +18,14 @@ const Header = () => {
 
   let newPathname = "";
 
+  newPathname = pathname;
+
+  if (pathname.includes("/blog")) {
+    newPathname = "/blog";
+  } else if (pathname.includes("/projects")) {
+    newPathname = "/projects";
+  }
+
   useEffect(() => {
     if (width > 768 && open) {
       setOpen(false);
@@ -37,7 +45,11 @@ const Header = () => {
                 <li key={i}>
                   <Link
                     href={href}
-                    className="text-[12px] tracking-[1px] font-semibold pb-2 linkUnderlineHover"
+                    className={`text-[12px] tracking-[1px] font-semibold pb-2 linkUnderlineHover ${
+                      newPathname === href
+                        ? "border-blue-600 text-blue-600 before:scale-x-[1]"
+                        : "border-transparent"
+                    }`}
                   >
                     {label}
                   </Link>
