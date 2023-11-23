@@ -6,6 +6,11 @@
   --cl-blue-600: #2563eb;
 }
 
+*::-moz-selection,
+*::selection {
+  @apply text-white bg-blue-600;
+}
+
 @layer components {
   .linkUnderlineHover {
     position: relative;
