@@ -10,7 +10,11 @@ const Copyright = () => {
           arcraft
         </Link>
         . All rights reserved. Created with{" "}
-        <BiSolidHeart className="text-red-500 mx-1 inline-block" /> by{" "}
+        <BiSolidHeart
+          className="text-red-500 mx-1 inline-block"
+          data-testid="heart-icon"
+        />{" "}
+        by{" "}
         <Link
           href="https://www.linkedin.com/in/vira-mesha/"
           target="_blank"

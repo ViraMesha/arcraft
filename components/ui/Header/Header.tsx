@@ -8,8 +8,8 @@ import { useWindowSize } from "usehooks-ts";
 
 import { navContent } from "@/utils/data/navContent";
 
-import Logo from "./Logo";
-import StyledLink from "./StyledLink";
+import Logo from "../Logo";
+import StyledLink from "../StyledLink";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
