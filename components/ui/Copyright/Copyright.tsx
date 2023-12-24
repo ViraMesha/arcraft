@@ -12,7 +12,8 @@ const Copyright = () => {
         . All rights reserved. Created with{" "}
         <BiSolidHeart
           className="text-red-500 mx-1 inline-block"
-          data-testid="heart-icon"
+          aria-label="heart-icon"
+          role="img"
         />{" "}
         by{" "}
         <Link

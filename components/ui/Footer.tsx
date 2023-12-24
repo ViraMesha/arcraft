@@ -3,7 +3,7 @@ import Link from "next/link";
 import { footerContent } from "@/utils/data/footerContent";
 
 import Copyright from "./Copyright/Copyright";
-import Logo from "./Logo";
+import Logo from "./Logo/Logo";
 
 const Footer = ({ className }: SectionProps) => {
   const { footerLinks } = footerContent;

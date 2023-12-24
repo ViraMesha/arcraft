@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { recentBlogContent } from "@/utils/data/recentBlogContent";
 
-import Description from "../ui/Description";
+import Description from "../ui/Description/Description";
 import Subtitle from "../ui/Subtitle";
 import Title from "../ui/Title";
 
@@ -31,7 +31,9 @@ const RecentBlogs = ({ className }: SectionProps) => {
 
             <div className="lg:w-5/12 self-end">
               {description && (
-                <Description delay={0.15} y={20}>{description}</Description>
+                <Description delay={0.15} y={20}>
+                  {description}
+                </Description>
               )}
             </div>
           </div>

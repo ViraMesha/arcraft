@@ -17,7 +17,7 @@ describe("Copyright Component", () => {
     expect(arcraftLink).toHaveAttribute("href", "/");
 
     // Check if the heart icon is rendered
-    const heartIcon = screen.getByTestId("heart-icon");
+    const heartIcon = screen.getByRole("img", { name: "heart-icon" });
     expect(heartIcon).toBeInTheDocument();
 
     // Check if the link to the author's LinkedIn profile is present

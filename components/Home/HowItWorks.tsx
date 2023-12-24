@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import { howItWorksContent } from "@/utils/data/howItWorksContent";
 
-import Description from "../ui/Description";
+import Description from "../ui/Description/Description";
 import Subtitle from "../ui/Subtitle";
 import Title from "../ui/Title";
 

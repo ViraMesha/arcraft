@@ -8,7 +8,7 @@ import { useWindowSize } from "usehooks-ts";
 
 import { navContent } from "@/utils/data/navContent";
 
-import Logo from "../Logo";
+import Logo from "../Logo/Logo";
 import StyledLink from "../StyledLink";
 
 const Header = () => {
