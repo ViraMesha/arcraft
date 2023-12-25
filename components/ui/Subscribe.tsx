@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { subscribeContent } from "@/utils/data/subscribeContent";
 
-import Title from "../ui/Title";
+import Title from "./Title/Title";
 
 const Subscribe = ({ className }: SectionProps) => {
   const {

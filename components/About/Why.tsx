@@ -8,7 +8,7 @@ import { whyContent } from "@/utils/data/whyContent";
 
 import team2Img from "../../public/images/about/team/team-2.jpg";
 import Subtitle from "../ui/Subtitle";
-import Title from "../ui/Title";
+import Title from "../ui/Title/Title";
 
 const Why = ({ className }: SectionProps) => {
   const ref = useRef<HTMLDivElement>(null);

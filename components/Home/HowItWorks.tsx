@@ -7,7 +7,7 @@ import { howItWorksContent } from "@/utils/data/howItWorksContent";
 
 import Description from "../ui/Description/Description";
 import Subtitle from "../ui/Subtitle";
-import Title from "../ui/Title";
+import Title from "../ui/Title/Title";
 
 const HowItWorks = ({ className }: SectionProps) => {
   const {

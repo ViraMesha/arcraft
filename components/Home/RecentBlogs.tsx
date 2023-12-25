@@ -6,7 +6,7 @@ import { recentBlogContent } from "@/utils/data/recentBlogContent";
 
 import Description from "../ui/Description/Description";
 import Subtitle from "../ui/Subtitle";
-import Title from "../ui/Title";
+import Title from "../ui/Title/Title";
 
 import PostCard from "./PostCard";
 

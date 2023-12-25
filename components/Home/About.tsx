@@ -9,7 +9,7 @@ import { aboutContent } from "@/utils/data/aboutContent";
 
 import StyledLink from "../ui/StyledLink";
 import Subtitle from "../ui/Subtitle";
-import Title from "../ui/Title";
+import Title from "../ui/Title/Title";
 
 const About = ({ className }: SectionProps) => {
   const ref = useRef<HTMLDivElement>(null);
