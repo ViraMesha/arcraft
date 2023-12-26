@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { recentBlogContent } from "@/utils/data/recentBlogContent";
 
 import Description from "../ui/Description/Description";
-import Subtitle from "../ui/Subtitle";
+import Subtitle from "../ui/Subtitle/Subtitle";
 import Title from "../ui/Title/Title";
 
 import PostCard from "./PostCard";

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { teamContent } from "@/utils/data/teamContent";
 
 import Description from "../ui/Description/Description";
-import Subtitle from "../ui/Subtitle";
+import Subtitle from "../ui/Subtitle/Subtitle";
 import Title from "../ui/Title/Title";
 
 const Team = ({ className }: SectionProps) => {

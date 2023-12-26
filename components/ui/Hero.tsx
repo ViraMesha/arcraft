@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import { aboutHeroContent } from "@/utils/data/aboutHeroContent";
 
-import Subtitle from "./Subtitle";
+import Subtitle from "./Subtitle/Subtitle";
 
 type HeroProps = {
   className: string;

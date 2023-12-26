@@ -9,7 +9,7 @@ import heroImg from "@/public/images/home/hero/img.jpg";
 import { heroContent } from "@/utils/data/heroContent";
 
 import StyledLink from "../ui/StyledLink";
-import Subtitle from "../ui/Subtitle";
+import Subtitle from "../ui/Subtitle/Subtitle";
 
 const Hero = ({ className }: SectionProps) => {
   const ref = useRef<HTMLDivElement>(null);

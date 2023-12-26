@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { howItWorksContent } from "@/utils/data/howItWorksContent";
 
 import Description from "../ui/Description/Description";
-import Subtitle from "../ui/Subtitle";
+import Subtitle from "../ui/Subtitle/Subtitle";
 import Title from "../ui/Title/Title";
 
 const HowItWorks = ({ className }: SectionProps) => {

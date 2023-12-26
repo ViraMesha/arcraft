@@ -8,7 +8,7 @@ import dotsImg from "@/public/images/home/hero/dots.svg";
 import { aboutContent } from "@/utils/data/aboutContent";
 
 import StyledLink from "../ui/StyledLink";
-import Subtitle from "../ui/Subtitle";
+import Subtitle from "../ui/Subtitle/Subtitle";
 import Title from "../ui/Title/Title";
 
 const About = ({ className }: SectionProps) => {

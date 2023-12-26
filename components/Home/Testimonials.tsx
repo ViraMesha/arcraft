@@ -7,7 +7,7 @@ import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 
 import { testimonialContent } from "@/utils/data/testimonialContent";
 
-import Subtitle from "../ui/Subtitle";
+import Subtitle from "../ui/Subtitle/Subtitle";
 import Title from "../ui/Title/Title";
 
 import "swiper/css";
